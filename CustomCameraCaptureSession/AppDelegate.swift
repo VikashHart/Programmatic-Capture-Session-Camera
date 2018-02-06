@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  CustomCameraCaptureSession
 //
-//  Created by C4Q on 2/6/18.
+//  Created by Vikash Hart on 2/6/18.
 //  Copyright © 2018 Vikash Hart. All rights reserved.
 //
 
@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Lines 21-25 are mandatory, and allows you to programmatically set up the view that will be shown on app launch when we are not using a storyBoard.
+        let viewController = CameraViewController()
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
         return true
     }
 
